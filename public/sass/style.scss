@@ -1,4 +1,5 @@
-
+---
+---
 html {
 	font-size: 12px;
 }
@@ -11,12 +12,6 @@ body {
 }
 .hidden { display: none; }
 .row { margin: 0; }
-
-@media only screen and (min-width: 600px) {
-	.modal-content {
-		width: 50%;
-	}
-  }
 
 // Landing -------------------
 .pg-container {
