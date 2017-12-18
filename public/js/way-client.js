@@ -26,9 +26,9 @@ var client = {
 
 				// Get Orientation of device
 				if (userInfo.stats.orientation === "portrait") {
-					// $(".img-canvas").addClass("portrait");
+					$(".img-canvas").addClass("portrait");
 					client.adjustBackground();
-					// $(".img-canvas").addClass("adjusted");
+					$(".img-canvas").addClass("adjusted");
 				}
 
 				// Submit button pulse
@@ -48,7 +48,16 @@ var client = {
 		return split[0];
 	},
 	adjustBackground: function(e) {
-		$('.img-canvas').css('transform','rotate(' + 90 + 'deg)');
+		e.preventDefault();
+		var aspect = $("body").height() / $("body").width();
+		if ($(".img-canvas").hasClass("adjusted")) {
+			$(".img-canvas").css("width", "100%");
+			$(".img-canvas").removeClass("adjusted");
+			$(".img-canvas").removeClass("portrait");
+		} else {
+			$(".img-canvas").css("width", aspect * 100 + "%");
+			$(".img-canvas").addClass("adjusted portrait");
+		}
 	},
 	useTypeManager: function(type) {
 		// Clear previous class before
@@ -170,7 +179,6 @@ var client = {
 			{     
 				console.log("Timed Out.");
 				$h.addClass("res");
-				client.clearResults();
 				$(".preloader-wrapper").removeClass("active");
 				$(".loading-icon").removeClass("active");
 				$(".result h2").text("Couldn't Detect Face.");
@@ -181,10 +189,10 @@ var client = {
 };
 
 // Listeners //////////////////////////////////////////////////
+// $("#rotate").on("click", client.adjustBackground);
 $("#cameraInput").on("change", client.getFile); // Get file
 $("#url_in").on("change", client.updatePhotoFromURL); // Update Photo Displayed in Canvas
 $("#submit").on("click", client.submit); // Get image data from HTML
-$("#rotate").on("click", client.adjustBackground);
 ///////////////////////////////////////////////////////////////
 $(".selectInputType").on("click", function(e) {
 	e.preventDefault();

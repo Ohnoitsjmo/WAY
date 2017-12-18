@@ -9,6 +9,7 @@ var userInfo = {
 		userInfo.getFlags();
 		userInfo.flagHTML();
 		userInfo.getOrientation();
+		console.log(userInfo.getOrientation());
 		// console.log('userInfo.stats',userInfo.stats);
 		return userInfo.stats;
 	},
