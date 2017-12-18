@@ -26,9 +26,9 @@ var client = {
 
 				// Get Orientation of device
 				if (userInfo.stats.orientation === "portrait") {
-					$(".img-canvas").addClass("portrait");
+					// $(".img-canvas").addClass("portrait");
 					client.adjustBackground();
-					$(".img-canvas").addClass("adjusted");
+					// $(".img-canvas").addClass("adjusted");
 				}
 
 				// Submit button pulse
