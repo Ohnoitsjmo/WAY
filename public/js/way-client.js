@@ -25,7 +25,7 @@ var client = {
 				client.imageData = { base64: b64 };
 
 				// Get Orientation of device
-				if (userInfo.stats.orientation == "portrait") {
+				if (userInfo.stats.orientation === "portrait") {
 					$(".img-canvas").addClass("portrait");
 					client.adjustBackground();
 					$(".img-canvas").addClass("adjusted");
