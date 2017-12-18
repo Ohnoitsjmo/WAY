@@ -27,7 +27,7 @@ var client = {
 				// Get Orientation of device
 				if (userInfo.stats.orientation === "portrait") {
 					$(".img-canvas").addClass("portrait");
-					// client.adjustBackground();
+					client.adjustBackground();
 					$(".img-canvas").addClass("adjusted");
 				}
 
@@ -47,18 +47,18 @@ var client = {
 		var split = orientation.split("-");
 		return split[0];
 	},
-	// adjustBackground: function(e) {
-	// 	e.preventDefault();
-	// 	var aspect = $("body").height() / $("body").width();
-	// 	if ($(".img-canvas").hasClass("adjusted")) {
-	// 		$(".img-canvas").css("width", "100%");
-	// 		$(".img-canvas").removeClass("adjusted");
-	// 		$(".img-canvas").removeClass("portrait");
-	// 	} else {
-	// 		$(".img-canvas").css("width", aspect * 100 + "%");
-	// 		$(".img-canvas").addClass("adjusted portrait");
-	// 	}
-	// },
+	adjustBackground: function(e) {
+		e.preventDefault();
+		var aspect = $("body").height() / $("body").width();
+		if ($(".img-canvas").hasClass("adjusted")) {
+			$(".img-canvas").css("width", "100%");
+			$(".img-canvas").removeClass("adjusted");
+			$(".img-canvas").removeClass("portrait");
+		} else {
+			$(".img-canvas").css("width", aspect * 100 + "%");
+			$(".img-canvas").addClass("adjusted portrait");
+		}
+	},
 	useTypeManager: function(type) {
 		// Clear previous class before
 		$h.removeClass("using-camera");
@@ -162,7 +162,7 @@ var client = {
 			type: "POST",
 			data: {data: reqData},
 			url: "/api/whoareyou",
-			timeout: 6000
+			timeout: 5000
 		}).done(function(result) {
 			$(".preloader-wrapper").removeClass("active");
 			$(".loading-icon").removeClass("active");
