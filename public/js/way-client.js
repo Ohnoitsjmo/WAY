@@ -39,7 +39,7 @@ var client = {
 							var base64data = canvas.toDataURL('image/jpeg');
 							//here's example to show it as on imae preview
 							var img_src = base64data.replace(/^data\:image\/\w+\;base64\,/, '');
-							$('.img-canvas').attr('src', base64data);
+							$(".img-canvas").css("background-image", 'url("' + img_src + '")');
 						}, {
 							//should be set to canvas : true to activate auto fix orientation
 							canvas: true,
