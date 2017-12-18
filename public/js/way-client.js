@@ -24,7 +24,12 @@ var client = {
 				var b64 = res.replace(/^data:image\/(.*);base64,/, "");
 				client.imageData = { base64: b64 };
 
-				client.adjustBackground();
+				// Get Orientation of device
+				if (userInfo.stats.orientation !== "portrait") {
+					$(".img-canvas").addClass("portrait");
+					client.adjustBackground();
+					$(".img-canvas").addClass("adjusted");
+				}
 
 				// Submit button pulse
 				$("#submit").addClass("pulse");
