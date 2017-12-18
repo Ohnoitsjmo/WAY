@@ -51,11 +51,11 @@ var userInfo = {
 					var h = window.innerWidth();
 
 					if (h > w){
-						userInfo.stats.orientation = 'portrait';
+						userInfo.stats.orientation = 'landscape';
 						// return 'portrait';
 					}
 					else { 
-						userInfo.stats.orientation = 'landscape';
+						userInfo.stats.orientation = 'portrait';
 						// return 'landscape'
 					}
 				}
