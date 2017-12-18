@@ -24,12 +24,7 @@ var client = {
 				var b64 = res.replace(/^data:image\/(.*);base64,/, "");
 				client.imageData = { base64: b64 };
 
-				// Get Orientation of device
-				if (userInfo.stats.orientation === "portrait") {
-					$(".img-canvas").addClass("portrait");
-					client.adjustBackground();
-					$(".img-canvas").addClass("adjusted");
-				}
+				client.adjustBackground();
 
 				// Submit button pulse
 				$("#submit").addClass("pulse");
@@ -113,7 +108,6 @@ var client = {
 			"background-image",
 			"url(" + imageData + ")"
 		);
-		client.adjustBackground;
 		client.imageData = imageData;
 	},
 	submit: function(e) {
