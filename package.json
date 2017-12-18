@@ -17,6 +17,7 @@
     "express": "^4.16.2",
     "express-handlebars": "^3.0.0",
     "express-session": "^1.15.4",
+    "fix-orientation": "0.0.2",
     "path": "^0.12.7"
   },
   "devDependencies": {

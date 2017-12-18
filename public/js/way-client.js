@@ -2,6 +2,7 @@
 // by Justin Mo
 /////////////////////////////////
 var $h = $("html");
+var fixOrientation = require('fix-orientation');
 
 var client = {
 	imageData: "",
@@ -16,7 +17,14 @@ var client = {
 		reader.addEventListener(
 			"load",
 			function() {
-				var res = reader.result;
+				var url = reader.result;
+
+				fixOrientation(url, { image: true }, function (fixed, image) {
+					var img = new Image();
+					img.src = fixed;
+					document.body.appendChild(img);
+					document.body.appendChild(image);
+				});
 
 				// console.log('reader.result', res);
 				$(".img-canvas").css("background-image", 'url("' + res + '")');
@@ -58,7 +66,7 @@ var client = {
 			$(".img-canvas").css("width", aspect * 100 + "%");
 			$(".img-canvas").addClass("adjusted portrait");
 		}
-	},
+	}
 	useTypeManager: function(type) {
 		// Clear previous class before
 		$h.removeClass("using-camera");
