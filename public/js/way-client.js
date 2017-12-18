@@ -113,6 +113,7 @@ var client = {
 			"background-image",
 			"url(" + imageData + ")"
 		);
+		client.adjustBackground;
 		client.imageData = imageData;
 	},
 	submit: function(e) {
