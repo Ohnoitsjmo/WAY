@@ -1,0 +1,206 @@
+
+html {
+	font-size: 12px;
+}
+body {
+	min-height: 90vh;
+	max-height: 100vh;
+	max-width: 100vw;
+	background-color: rgba(67,67,67,1);
+	background-color: #fcfcfc;
+}
+.hidden { display: none; }
+.row { margin: 0; }
+
+@media only screen and (min-width: 600px) {
+	.modal-content {
+		width: 50%;
+	}
+  }
+
+// Landing -------------------
+.pg-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	min-height: inherit;
+	padding: 5vh;
+	padding-top: 10vh;
+	position: relative;
+	z-index: 100;
+	.landing.blurb {	
+		.headline {
+			font-weight: 900;
+			font-size: 6rem;
+			margin: 0;
+			height: initial;
+			line-height: 0.9em;
+			letter-spacing: -2px;
+			display: inline-block;
+			color: #111;
+			z-index: 200;
+		}
+	}
+	.landing.who {
+		// width: 60%;
+		// height: initial;
+		// max-height: 200px;
+		//  position: absolute; 
+		//  bottom: 160px; 
+		//  right: 24px; 
+		// position: relative;
+		// margin-top: -100px;
+		// height: 40vh;
+		// max-height: 200px;
+		flex-basis: 150px;
+		margin: 40px 0;
+	}
+
+	.subheadline {
+		// position: absolute;
+		// bottom: 80px;
+		// left: 0;
+		// display: inline-block;
+		// width: 100%;
+		// padding: 0 10%;
+		// height: initial;
+		// line-height: initial;
+		// margin: 0 auto;
+		p,a {
+			font-size: 16px;
+			height: initial;
+			display: inline-block;
+			line-height: 1em;
+			width: 100%;
+			margin: 3px 0;
+			text-align: center;
+			font-weight: 300;
+		}
+		p {
+			color: #333;
+		}
+		.alpha {
+			font-size: 24px;
+			color: #222;
+			font-weight: 500;
+			letter-spacing: -0.5px;
+		}
+	}
+}
+
+// Loading Icon --------------------
+	.loading-icon {
+		width: 100%;
+		display: block;
+		position: fixed;
+		top: 50%;
+		margin-top: -30px;
+		left: 0;
+		background-image: url(../icons/gif.gif);
+		background-position: 50% 50%;
+		background-repeat: no-repeat;
+		text-align: center;
+			background-size: 88px;
+			padding-top: 5.5px;
+		.preloader-wrapper {
+			height: 100px;
+			width: 100px;
+		}
+	}
+
+// Image Canvas --------------------
+	.img-canvas {
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100vh;
+		width: 100%;
+		margin: 0;
+		padding: 0;
+		text-align: center;
+		background-color: transparent;
+		background-size: cover;
+		background-position: 50% 50%;
+		z-index: 1;
+	}
+
+// Form ----------------------------- 
+	// Fix form row to bottom 
+	.row.form {
+		position: fixed;
+		bottom:	0;
+		left: 0;
+		width: 100%;
+		margin: 0;
+		padding: 16px;
+		background-color: rgba(24,24,24,0.81);
+		background-color: rgba(67,67,67,1);
+		background-color: transparent;
+		z-index: 100;
+	}
+	input[type=text],
+	.file-path-wrapper input[type=file] {
+		color: #eee;
+	}
+
+// Button Nav ----------------------
+	.btn-row {
+		text-align: left;
+		.btn {
+			background-color: transparent;
+			background-color: rgba(24,24,24,0.24);
+			position: relative;
+			height: 48px;
+			width: 48px;
+			padding: 0;
+			line-height: 48px;
+			border-radius: 24px;
+			i {
+				font-size: 24px;
+			}
+
+		}
+		#useCamera {
+			background-color: #e74c3c;
+		}
+		#useURL {
+			background-color: #3498db;
+		}
+		#submit {
+			background-color: #2ecc71;
+			float: right;
+		}
+	}
+
+// Input Fields --------------------
+	//  Hide input fields by default. Reveal once selected
+	#url-field, #file-field { display: none; }
+
+	.using-url {
+		#url-field, #file-field {
+			display: inline-block;
+		}
+	}
+	.using-url, .using-file {
+		.row.form {
+			background-color: rgba(0,0,0,0.81);
+		}
+	}
+
+// Hidden Camera Input -------------
+	#cameraInput {
+		visibility: hidden;
+		display: none;
+	}
+// Post-Landing --------------------
+	.on-air .landing {
+		display: none;
+	}
+
+	.loading-icon {
+		display: none;
+		&.active {
+			display: block;
+		}
+	}

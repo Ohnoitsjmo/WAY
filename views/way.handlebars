@@ -1,0 +1,80 @@
+
+
+<!--=============================================-->
+<div class="row display result">
+		<!-- Modal content -->
+		<div class="modal-content">
+			<div class="modal-header">
+				<span class="close">&times;</span>
+				<h2>Results</h2>
+			</div>
+			<table class="modal-body">
+				<tr>
+					<td id="age" style="float:left; margin-left: 12%;"></td>
+					<td id="agecertainty" style="float:right; margin-right: 12%;"></td>
+				</tr>
+				<tr>
+					<td id="gender" style="float:left; margin-left: 12%;"></td>
+					<td id="gendercertainty" style="float:right; margin-right: 12%;"></td>
+				</tr>
+				<tr>
+					<td id="ethnicity" style="float:left; margin-left: 12%;"></td>
+					<td id="ethnicitycertainty" style="float:right; margin-right: 12%;"></td>
+				</tr>
+			</table>
+		</div>
+</div>
+
+<!--=============================================-->
+<div class="query pg-container">
+	<div class="blurb landing">
+		<h2 id="title" class="headline">Who Are You?</h2>
+	</div>
+	<img class="who landing" src="icons/thinking.png">
+	<div class="subheadline landing">
+		<p class="alpha">Created by Justin Mo.</p>
+		<p>Inspired by Wayne Cheng.</p>
+		<a href="https://github.com/wayncheng/hotdog-or-not">GitHub</a>
+		{{!-- <p>
+		</p> --}}
+		<!-- <p>Powered by Clarifai.</p> -->
+	</div>
+	<div class="loading-icon">
+		<div class="preloader-wrapper big">
+			<div class="spinner-layer spinner-blue-only">
+				<div class="circle-clipper left">
+					<div class="circle"></div>
+				</div>
+				<div class="gap-patch">
+					<div class="circle"></div>
+				</div>
+				<div class="circle-clipper right">
+					<div class="circle"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!--=============================================-->
+
+<div class="img-canvas portrait"></div>
+<!--=============================================-->
+<div class="row form">
+	<form class="col s12">
+		<div class="row">
+			<div id="url-field" class="input-field col s12 m8 offset-m2 l6 offset-l3">
+				<input id="url_in" type="text" class="imgInput validate">
+				<label for="url_in">Image URL</label>
+			</div>
+		</div>
+		<div class="row btn-row">
+			
+			 <a id="useCamera" class="selectInputType btn-round btn waves-effect waves-light selected" data-type="camera"> <i class="material-icons">camera_alt</i> </a>
+			 <a id="useURL" class="selectInputType btn-round btn waves-effect waves-light" data-type="url"><i class="material-icons">link</i></a>
+			 <!-- <a id="useFile" class="selectInputType btn-round btn waves-effect waves-light" data-type="file"><i class="material-icons">image</i></a> -->
+			 {{!-- <a id="rotate" class="btn-round btn waves-effect waves-light"><i class="material-icons">screen_rotation</i></a> --}}
+			 <a id="submit" class="btn-round btn waves-effect waves-light"><i class="material-icons">send</i></a>
+		</div>
+	</form>
+</div>
+<input id="cameraInput" class="imgInput" type="file" accept="image/*">

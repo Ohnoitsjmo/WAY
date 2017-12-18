@@ -1,0 +1,180 @@
+/*
+	Materialize CSS color overrides
+*/
+/*
+	original #eee
+	bluegrey-lighten1 #eee
+*/
+.collection .collection-item.active {
+  background-color: #eee;
+  color: #eafaf9;
+}
+
+
+.collection a.collection-item {
+  color: #eee;
+}
+
+.secondary-content {
+  color: #eee;
+}
+
+.progress .determinate {
+  background-color: #eee;
+}
+
+.progress .indeterminate {
+  background-color: #eee;
+}
+span.badge.new {
+  color: #fff;
+  background-color: #eee;
+}
+
+.btn, .btn-large {
+  color: #fff;
+  background-color: rgba(0,0,0,0.5);
+}
+
+.btn-floating {
+  color: #fff;
+  background-color: rgba(0,0,0,0.5);
+}
+.btn-floating:hover {
+  background-color: rgba(0,0,0,0.5);
+}
+
+.btn:hover, .btn-large:hover {
+  background-color: rgba(0,0,0,0.81);
+}
+
+.side-nav li > a.btn:hover, .side-nav li > a.btn-large:hover, .side-nav li > a.btn-large:hover {
+  background-color: rgba(0,0,0,0.81);
+}
+.fixed-action-btn .fab-backdrop {
+  background-color: #eee;
+}
+.dropdown-content li > a, .dropdown-content li > span {
+  color: #eee;
+}
+
+.chips.focus {
+  border-bottom: 1px solid #eee;
+  box-shadow: 0 1px 0 0 #eee;
+}
+
+.chips .chip.selected {
+  background-color: #eee;
+  color: #fff;
+}
+input:not([type]):focus:not([readonly]),
+input[type=text]:focus:not([readonly]),
+input[type=password]:focus:not([readonly]),
+input[type=email]:focus:not([readonly]),
+input[type=url]:focus:not([readonly]),
+input[type=time]:focus:not([readonly]),
+input[type=date]:focus:not([readonly]),
+input[type=datetime]:focus:not([readonly]),
+input[type=datetime-local]:focus:not([readonly]),
+input[type=tel]:focus:not([readonly]),
+input[type=number]:focus:not([readonly]),
+input[type=search]:focus:not([readonly]),
+textarea.materialize-textarea:focus:not([readonly]) {
+  border-bottom: 1px solid #eee;
+  box-shadow: 0 1px 0 0 #eee;
+}
+
+input:not([type]):focus:not([readonly]) + label,
+input[type=text]:focus:not([readonly]) + label,
+input[type=password]:focus:not([readonly]) + label,
+input[type=email]:focus:not([readonly]) + label,
+input[type=url]:focus:not([readonly]) + label,
+input[type=time]:focus:not([readonly]) + label,
+input[type=date]:focus:not([readonly]) + label,
+input[type=datetime]:focus:not([readonly]) + label,
+input[type=datetime-local]:focus:not([readonly]) + label,
+input[type=tel]:focus:not([readonly]) + label,
+input[type=number]:focus:not([readonly]) + label,
+input[type=search]:focus:not([readonly]) + label,
+textarea.materialize-textarea:focus:not([readonly]) + label {
+  color: #eee;
+}
+
+
+.input-field .prefix.active {
+  color: #eee;
+}
+
+[type="radio"]:checked + label:after,
+[type="radio"].with-gap:checked + label:before,
+[type="radio"].with-gap:checked + label:after {
+  border: 2px solid #eee;
+}
+
+[type="radio"]:checked + label:after,
+[type="radio"].with-gap:checked + label:after {
+  background-color: #eee;
+}
+
+[type="checkbox"]:checked + label:before {
+  border-right: 2px solid #eee;
+  border-bottom: 2px solid #eee;
+}
+
+/* Indeterminate checkbox */
+[type="checkbox"]:indeterminate + label:before {
+  border-right: 2px solid #eee;
+}
+
+[type="checkbox"].filled-in:checked + label:after {
+  border: 2px solid #eee;
+  background-color: #eee;
+}
+[type="checkbox"].filled-in.tabbed:checked:focus + label:after {
+  background-color: #eee;
+  border-color: #eee;
+}
+.switch label input[type=checkbox]:checked + .lever:after {
+  background-color: #eee;
+}
+
+input[type=range] + .thumb {
+  background-color: #eee;
+}
+
+input[type=range] + .thumb .value {
+  color: #eee;
+}
+input[type=range]::-webkit-slider-thumb {
+  background-color: #eee;
+}
+input[type=range]::-moz-range-thumb {
+  background: #eee;
+}
+input[type=range]::-ms-thumb {
+  background: #eee;
+}
+.side-nav li > a.btn-floating:hover {
+  background-color: #eee;
+}
+
+.spinner-layer {
+  border-color: #eee;
+}
+
+.picker__date-display {
+  background-color: #eee;
+}
+.picker__day.picker__day--today {
+  color: #eee;
+}
+
+.picker__day--selected,
+.picker__day--selected:hover,
+.picker--focused .picker__day--selected {
+  background-color: #eee;
+  color: #ffffff;
+}
+.picker__close, .picker__today {
+  color: #eee;
+}
