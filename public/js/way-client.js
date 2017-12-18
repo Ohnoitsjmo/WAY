@@ -179,6 +179,7 @@ var client = {
 			{     
 				console.log("Timed Out.");
 				$h.addClass("res");
+				client.clearResults();
 				$(".preloader-wrapper").removeClass("active");
 				$(".loading-icon").removeClass("active");
 				$(".result h2").text("Couldn't Detect Face.");
