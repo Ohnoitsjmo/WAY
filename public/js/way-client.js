@@ -48,8 +48,7 @@ var client = {
 		return split[0];
 	},
 	adjustBackground: function(e) {
-		angle += 90;
-		$('.portrait').css('transform','rotate(' + angle + 'deg)');
+		$('.img-canvas').css('transform','rotate(' + 90 + 'deg)');
 	},
 	useTypeManager: function(type) {
 		// Clear previous class before
