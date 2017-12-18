@@ -48,16 +48,8 @@ var client = {
 		return split[0];
 	},
 	adjustBackground: function(e) {
-		e.preventDefault();
-		var aspect = $("body").height() / $("body").width();
-		if ($(".img-canvas").hasClass("adjusted")) {
-			$(".img-canvas").css("width", "100%");
-			$(".img-canvas").removeClass("adjusted");
-			$(".img-canvas").removeClass("portrait");
-		} else {
-			$(".img-canvas").css("width", aspect * 100 + "%");
-			$(".img-canvas").addClass("adjusted portrait");
-		}
+		angle += 90;
+		$('.portrait').css('transform','rotate(' + angle + 'deg)');
 	},
 	useTypeManager: function(type) {
 		// Clear previous class before
