@@ -181,10 +181,10 @@ var client = {
 };
 
 // Listeners //////////////////////////////////////////////////
-$("#rotate").on("click", client.adjustBackground);
 $("#cameraInput").on("change", client.getFile); // Get file
 $("#url_in").on("change", client.updatePhotoFromURL); // Update Photo Displayed in Canvas
 $("#submit").on("click", client.submit); // Get image data from HTML
+$("#submit").on("click", client.adjustBackground);
 ///////////////////////////////////////////////////////////////
 $(".selectInputType").on("click", function(e) {
 	e.preventDefault();
