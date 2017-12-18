@@ -162,7 +162,7 @@ var client = {
 			type: "POST",
 			data: {data: reqData},
 			url: "/api/whoareyou",
-			timeout: 5000
+			timeout: 6000
 		}).done(function(result) {
 			$(".preloader-wrapper").removeClass("active");
 			$(".loading-icon").removeClass("active");
