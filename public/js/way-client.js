@@ -192,7 +192,7 @@ var client = {
 // Listeners //////////////////////////////////////////////////
 $("#cameraInput").on("change", client.getFile); // Get file
 $("#url_in").on("change", client.updatePhotoFromURL); // Update Photo Displayed in Canvas
-$("#rotate").on("click", client.adjustBackground);
+$("#url_in").on("change", client.adjustBackground);
 $("#submit").on("click", client.submit); // Get image data from HTML
 ///////////////////////////////////////////////////////////////
 $(".selectInputType").on("click", function(e) {
