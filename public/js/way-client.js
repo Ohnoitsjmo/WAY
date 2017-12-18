@@ -19,9 +19,9 @@ var client = {
 				var res = reader.result;
 
 				// console.log('reader.result', res);
-				$(".img-canvas").css("background-image", 'url("' + res + '")');
+				$(".img-canvas").css("background-image", 'url("' + client.getBase64Image(res) + '")');
 				// Convert to base 64 for use in query. Important!!!!!
-				var b64 = client.getBase64Image(res);
+				var b64 = res.replace(/^data:image\/(.*);base64,/, "");
 				client.imageData = { base64: b64 };
 
 				// Get Orientation of device
