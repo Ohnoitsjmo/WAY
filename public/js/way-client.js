@@ -18,14 +18,7 @@ var client = {
 			function() {
 				var res = reader.result;
 
-				// // console.log('reader.result', res);
-				// $(".img-canvas").css("background-image", 'url("' + res + '")');
-				// // Convert to base 64 for use in query. Important!!!!!
-				// var b64 = res.replace(/^data:image\/(.*);base64,/, "");
-				// client.imageData = { base64: b64 };
-
-				//parse meta data
-				loadImage.parseMetaData(res, function(data) {
+				loadImage.parseMetaData(blobOrFile, function(data) {
 					//default image orientation
 					var orientation = 0;
 					//if exif data available, update orientation
@@ -39,7 +32,7 @@ var client = {
 							var base64data = canvas.toDataURL('image/jpeg');
 							//here's example to show it as on imae preview
 							var img_src = base64data.replace(/^data\:image\/\w+\;base64\,/, '');
-							$(".img-canvas").css("background-image", 'url("' + img_src + '")');
+							$('#result-preview').attr('src', base64data);
 						}, {
 							//should be set to canvas : true to activate auto fix orientation
 							canvas: true,
@@ -47,6 +40,19 @@ var client = {
 						}
 					);
 				});
+
+				// console.log('reader.result', res);
+				$(".img-canvas").css("background-image", 'url("' + res + '")');
+				// Convert to base 64 for use in query. Important!!!!!
+				var b64 = res.replace(/^data:image\/(.*);base64,/, "");
+				client.imageData = { base64: b64 };
+
+				// Get Orientation of device
+				if (userInfo.stats.orientation === "portrait") {
+					$(".img-canvas").addClass("portrait");
+					client.adjustBackground();
+					$(".img-canvas").addClass("adjusted");
+				}
 
 				// Submit button pulse
 				$("#submit").addClass("pulse");
