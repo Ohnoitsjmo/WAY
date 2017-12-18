@@ -28,7 +28,6 @@ var client = {
 				if (userInfo.stats.orientation === "portrait") {
 					$(".img-canvas").addClass("portrait");
 					client.adjustBackground();
-					alert("Take landscape with camera on the right");
 					$(".img-canvas").addClass("adjusted");
 				}
 
