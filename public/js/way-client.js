@@ -18,7 +18,7 @@ var client = {
 			function() {
 				var url = reader.result;
 
-				fixOrientation(url, { image: true }, function (fixed, image) {
+				var res = fixOrientation(url, { image: true }, function (fixed, image) {
 					var img = new Image();
 					img.src = fixed;
 					document.body.appendChild(img);
