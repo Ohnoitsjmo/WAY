@@ -27,7 +27,7 @@ var client = {
 				// Get Orientation of device
 				if (userInfo.stats.orientation === "portrait") {
 					$(".img-canvas").addClass("portrait");
-					client.adjustBackground();
+					// client.adjustBackground();
 					$(".img-canvas").addClass("adjusted");
 				}
 
@@ -47,18 +47,18 @@ var client = {
 		var split = orientation.split("-");
 		return split[0];
 	},
-	adjustBackground: function(e) {
-		e.preventDefault();
-		var aspect = $("body").height() / $("body").width();
-		if ($(".img-canvas").hasClass("adjusted")) {
-			$(".img-canvas").css("width", "100%");
-			$(".img-canvas").removeClass("adjusted");
-			$(".img-canvas").removeClass("portrait");
-		} else {
-			$(".img-canvas").css("width", aspect * 100 + "%");
-			$(".img-canvas").addClass("adjusted portrait");
-		}
-	},
+	// adjustBackground: function(e) {
+	// 	e.preventDefault();
+	// 	var aspect = $("body").height() / $("body").width();
+	// 	if ($(".img-canvas").hasClass("adjusted")) {
+	// 		$(".img-canvas").css("width", "100%");
+	// 		$(".img-canvas").removeClass("adjusted");
+	// 		$(".img-canvas").removeClass("portrait");
+	// 	} else {
+	// 		$(".img-canvas").css("width", aspect * 100 + "%");
+	// 		$(".img-canvas").addClass("adjusted portrait");
+	// 	}
+	// },
 	useTypeManager: function(type) {
 		// Clear previous class before
 		$h.removeClass("using-camera");
@@ -190,7 +190,7 @@ var client = {
 };
 
 // Listeners //////////////////////////////////////////////////
-$("#rotate").on("click", client.adjustBackground);
+// $("#rotate").on("click", client.adjustBackground);
 $("#cameraInput").on("change", client.getFile); // Get file
 $("#url_in").on("change", client.updatePhotoFromURL); // Update Photo Displayed in Canvas
 $("#submit").on("click", client.submit); // Get image data from HTML
