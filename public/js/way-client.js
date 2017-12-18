@@ -16,19 +16,12 @@ var client = {
 		reader.addEventListener(
 			"load",
 			function() {
-				var url = reader.result;
-
-				fixOrientation(url, { image: true }, function (fixed, image) {
-					var img = new Image();
-					img.src = fixed;
-					document.body.appendChild(img);
-					document.body.appendChild(image);
-				});
+				var res = reader.result;
 
 				// console.log('reader.result', res);
-				$(".img-canvas").css("background-image", 'url("' + url + '")');
+				$(".img-canvas").css("background-image", 'url("' + res + '")');
 				// Convert to base 64 for use in query. Important!!!!!
-				var b64 = url.replace(/^data:image\/(.*);base64,/, "");
+				var b64 = res.replace(/^data:image\/(.*);base64,/, "");
 				client.imageData = { base64: b64 };
 
 				// Get Orientation of device
@@ -65,7 +58,7 @@ var client = {
 			$(".img-canvas").css("width", aspect * 100 + "%");
 			$(".img-canvas").addClass("adjusted portrait");
 		}
-	},
+	}
 	useTypeManager: function(type) {
 		// Clear previous class before
 		$h.removeClass("using-camera");

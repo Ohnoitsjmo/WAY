@@ -10,7 +10,6 @@
   "author": "justin mo",
   "license": "ISC",
   "dependencies": {
-    "blueimp-load-image": "git+https://github.com/blueimp/JavaScript-Load-Image.git",
     "body-parser": "^1.18.2",
     "clarifai": "^2.5.0",
     "dotenv": "^4.0.0",

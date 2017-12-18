@@ -4,7 +4,6 @@
 	const router = express.Router();
 	const bodyParser = require("body-parser");
 	const Clarifai = require('clarifai');
-	const fixOrientation = require('fix-orientation');
 	const app = new Clarifai.App({
 	 apiKey: 'ed2d3ddb39a148f594d8bce47de2a8e4'
 	});
