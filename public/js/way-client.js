@@ -19,7 +19,7 @@ var client = {
 				var res = reader.result;
 
 				// console.log('reader.result', res);
-				$(".img-canvas").css("background-image", 'url("' + client.getBase64Image(res) + '")');
+				$(".img-canvas").css("background-image", 'url("' + res + '")');
 				// Convert to base 64 for use in query. Important!!!!!
 				var b64 = res.replace(/^data:image\/(.*);base64,/, "");
 				client.imageData = { base64: b64 };
@@ -58,24 +58,6 @@ var client = {
 			$(".img-canvas").css("width", aspect * 100 + "%");
 			$(".img-canvas").addClass("adjusted portrait");
 		}
-	},
-	getBase64Image: function(img) {
-		// Create an empty canvas element
-		var canvas = document.createElement("canvas");
-		canvas.width = img.width;
-		canvas.height = img.height;
-	
-		// Copy the image contents to the canvas
-		var ctx = canvas.getContext("2d");
-		ctx.drawImage(img, 0, 0);
-	
-		// Get the data-URL formatted image
-		// Firefox supports PNG and JPEG. You could check img.src to
-		// guess the original format, but be aware the using "image/jpg"
-		// will re-encode the image.
-		var dataURL = canvas.toDataURL("image/png");
-	
-		return dataURL.replace(/^data:image\/(png|jpg);base64,/, "");
 	},
 	useTypeManager: function(type) {
 		// Clear previous class before
