@@ -58,7 +58,7 @@ var client = {
 			$(".img-canvas").css("width", aspect * 100 + "%");
 			$(".img-canvas").addClass("adjusted portrait");
 		}
-	}
+	},
 	useTypeManager: function(type) {
 		// Clear previous class before
 		$h.removeClass("using-camera");
